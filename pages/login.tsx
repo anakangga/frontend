@@ -11,7 +11,7 @@ import { Field, Form, Formik, FormikValues } from "formik";
 import axios from "../lib/axios";
 import Cookies from "js-cookie";
 import { getSession, signIn } from "next-auth/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const Login: NextPage = () => {
@@ -24,7 +24,10 @@ const Login: NextPage = () => {
 
   const toast = useToast();
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (data: FormikValues) => {
+    setLoading(true);
     await signIn("credentials", {
       redirect: false,
       email: data.email,
@@ -55,6 +58,8 @@ const Login: NextPage = () => {
           status: "error",
         });
       }
+
+      setLoading(false);
     });
   };
 
@@ -102,7 +107,7 @@ const Login: NextPage = () => {
                 <Button
                   mt={4}
                   colorScheme="teal"
-                  isLoading={false}
+                  isLoading={loading}
                   type="submit"
                 >
                   Login
