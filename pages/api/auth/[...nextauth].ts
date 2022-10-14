@@ -1,4 +1,4 @@
-import NextAuth, { Awaitable, RequestInternal, User } from "next-auth";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { AxiosError } from "axios";
 import axios from "../../../lib/axios";
@@ -12,8 +12,6 @@ export const authOptions = {
       credentials: {
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
-        key: { label: "Key", type: "password" },
-        display_name: { label: "Display Name", type: "text" },
       },
       async authorize(credentials, req) {
         const data = await axios
