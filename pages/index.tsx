@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import { Heading } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
@@ -12,13 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <h1>Welcome</h1>
-        <div>
-          <Link href="/register">Register</Link>
-        </div>
-        <div>
-          <Link href="/login">Login</Link>
-        </div>
+        <Heading>Lorem ipsum</Heading>
       </div>
     </div>
   );

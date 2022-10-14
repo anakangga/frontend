@@ -1,3 +1,5 @@
+import Navbar from "./navbar";
+
 interface Props {
   children: React.ReactNode;
 }
@@ -5,7 +7,8 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div>
-      <main className="min-h-screen">{children}</main>
+      <Navbar />
+      <main className="min-h-screen pt-20">{children}</main>
       <footer className="w-full text-center">&copy; 2022</footer>
     </div>
   );
