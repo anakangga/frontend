@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 
-const Home: NextPage = () => {
+const Profile: NextPage = () => {
   return (
     <div className="container mx-auto">
       <Head>
@@ -11,17 +10,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1>Welcome</h1>
-        <div>
-          <Link href="/register">Register</Link>
-        </div>
-        <div>
-          <Link href="/login">Login</Link>
-        </div>
-      </div>
+      <h1>You are logged in</h1>
     </div>
   );
 };
 
-export default Home;
+export default Profile;
