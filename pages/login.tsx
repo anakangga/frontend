@@ -78,7 +78,7 @@ const Login: NextPage = () => {
             initialValues={{ email: "", password: "" }}
             onSubmit={onSubmit}
           >
-            {() => (
+            {({ values }) => (
               <Form>
                 <Field name="email">
                   {({ field }: any) => (
@@ -109,6 +109,7 @@ const Login: NextPage = () => {
                   colorScheme="teal"
                   isLoading={loading}
                   type="submit"
+                  disabled={values.email === "" || values.password === ""}
                 >
                   Login
                 </Button>
