@@ -8,8 +8,10 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <main className="min-h-screen pt-20">{children}</main>
-      <footer className="w-full text-center">&copy; 2022</footer>
+      <main className="min-h-screen pt-16">{children}</main>
+      <footer className="w-full text-center bg-[#319795] py-16 text-white">
+        &copy; 2022 Gesturin
+      </footer>
     </div>
   );
 };
