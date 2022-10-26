@@ -17,7 +17,8 @@ const Navbar: React.FC = () => {
   const NavRoute = [];
 
   if (status === "authenticated") {
-    NavRoute.push({ id: 8, href: "/account", name: "Account" });
+    NavRoute.push({ id: 9, href: "/dashboard", name: "Dashboard" });
+    NavRoute.push({ id: 8, href: "/account", name: "Akun" });
   } else {
     NavRoute.push({ id: 9, href: "/login", name: "Login" });
     NavRoute.push({ id: 10, href: "/register", name: "Register" });
@@ -115,7 +116,7 @@ const Navbar: React.FC = () => {
 
 const Logo = () => (
   <svg
-    className="w-12 h-12"
+    className="w-10 h-10"
     viewBox="0 0 75 88"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
